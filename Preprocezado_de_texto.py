@@ -12,6 +12,11 @@ from nltk.stem import WordNetLemmatizer
 import string
 
 def preprocess_text(text):
+    # Verificar si el texto es una cadena
+    if not isinstance(text, str):
+        # Si no es una cadena, convertir a cadena antes de tokenizar
+        text = str(text)
+
     # Tokenización
     tokens = word_tokenize(text)
 

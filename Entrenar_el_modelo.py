@@ -12,18 +12,3 @@ training_features = [(extract_features(text), label) for text, label in preproce
 
 # Entrenamiento del clasificador Naive Bayes
 classifier = NaiveBayesClassifier.train(training_features)
-
-########################### Clasificación de un nuevo texto ###########################
-
-# Nuevo texto para clasificar
-##new_text = "It is a error"
-
-# Preprocesamiento del nuevo texto
-##preprocessed_text = preprocess_text(new_text)
-
-# Extracción de características del nuevo texto
-##features = extract_features(preprocessed_text)
-
-# Clasificación del nuevo texto
-##sentiment = classifier.classify(features)
-##print("Sentiment:", sentiment)
