@@ -6,16 +6,17 @@
     <title>Analizador de sentimientos</title>
 </head>
 <body>
-    <label for="textoInput">Ingrese un texto:</label>
-    <input type="text" id="textoInput">
-    <button onclick="enviarTexto()">Enviar</button>
-
-    <p id="resultado"></p>
+    <div class="container">
+        <label for="textoInput">Enter Text:</label>
+        <input type="text" id="textoInput">
+        <button onclick="enviarTexto()">Sentiment</button>
+        <p id="resultado"></p>
+    </div>
 
     <style>
             body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f4f4f4;
+                font-family: 'Roboto', sans-serif;
+                background-color: #531313;
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -25,42 +26,50 @@
             }
 
             .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 text-align: center;
-                background-color: #fff;
+                border-radius: 15px;
+                background-color: #524242;
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             }
 
             label {
                 display: block;
                 margin-bottom: 10px;
+                font-size: 30px;
             }
 
             input {
                 padding: 8px;
-                font-size: 16px;
+                font-size: 18px;
                 width: 50%;
                 box-sizing: border-box;
+                border-radius: 5px;
             }
 
             button {
-                background-color: #4caf50;
+                background-color: #ff6347;
+                transition: background-color 0.3s ease;
                 color: #fff;
                 padding: 10px 15px;
                 margin-left: 5px;
-                font-size: 16px;
+                font-size: 18px;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
             }
 
             button:hover {
-                background-color: #45a049;
+                background-color: #ff4500;
             }
 
             p#resultado {
-                font-size: 24px;
+                font-size: 40px;
                 margin-top: 20px;
             }
 
