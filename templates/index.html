@@ -77,6 +77,7 @@
     </style>
 
     <script>
+
         function enviarTexto() {
             var textoIngresado = document.getElementById("textoInput").value;
 
@@ -106,8 +107,18 @@
                     default:
                         console.log("Opción no reconocida");
                 }
+
             });
         }
+
+        // Agregar evento de escucha para la tecla "Enter"
+        document.getElementById("textoInput").addEventListener("keyup", function(event) {
+            // Verificar si la tecla presionada es "Enter"
+            if (event.key === "Enter") {
+                // Llamar a la función enviarTexto
+                enviarTexto();
+            }
+        })
     </script>
 </body>
 </html>
